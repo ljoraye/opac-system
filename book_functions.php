@@ -92,18 +92,23 @@ function returnBook($book_id){
 
 function getDeweyDecimal($category){
     $map = [
-        "American Literature" => "813.6",
+        "General Works"        => "000",
+        "Philosophy"           => "100",
+        "Religion"             => "200",
+        "Social Sciences"      => "300",
+        "Language"             => "400",
+        "Science"              => "500",
+        "Technology"           => "600",
+        "Arts and Recreation"  => "700",
+        "Literature"           => "800",
+        "American Literature"  => "813.6",
         "English Literature"   => "823.91",
         "Korean Literature"    => "897.7",
-        "Fantasy"              => "823.91",   
-        "Memoir"               => "920",
-        "Romantic Comedy"      => "813.6"
+        "History"              => "900",
+        "Biography"            => "920"
     ];
 
-    return isset($map[$category]) ? $map[$category] : "800"; // default 800 general literature
+    return isset($map[$category]) ? $map[$category] : "800"; // default = Literature
 }
-
-
-
 ?>
 

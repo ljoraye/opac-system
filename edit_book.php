@@ -34,7 +34,22 @@ if(isset($_POST['update'])){
     <select name="category" required>
         <option value="">Select Category</option>
         <?php
-        $categories = ["American Literature","English Literature","Korean Literature","Fantasy","Memoir","Romantic Comedy"];
+        $categories = [
+            "General Works",
+            "Philosophy",
+            "Religion",
+            "Social Sciences",
+            "Language",
+            "Science",
+            "Technology",
+            "Arts and Recreation",
+            "Literature",
+            "American Literature",
+            "English Literature",
+            "Korean Literature",
+            "History",
+            "Biography"
+        ];
         foreach($categories as $cat){
             $selected = $book['category'] == $cat ? "selected" : "";
             echo "<option value='$cat' $selected>$cat</option>";

@@ -14,7 +14,7 @@ $books = isset($_GET['search'])
     : mysqli_query($conn,"SELECT * FROM books ORDER BY CAST(dewey_decimal AS DECIMAL) ASC");
 ?>
 
-<h2>User OPAC</h2>
+<h2>Online Public Access Catalog (User)</h2>
 
 <form method="GET">
 Search: <input type="text" name="search">
