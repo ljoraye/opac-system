@@ -111,4 +111,3 @@ function getDeweyDecimal($category){
     return isset($map[$category]) ? $map[$category] : "800"; // default = Literature
 }
 ?>
-

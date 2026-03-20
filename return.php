@@ -6,4 +6,3 @@ returnBook($id);
 
 header("Location: admin.php");
 ?>
-

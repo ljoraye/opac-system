@@ -4,3 +4,4 @@ $id = $_GET['id'];
 deleteBook($id);
 header("Location: admin.php");
 ?>
+
