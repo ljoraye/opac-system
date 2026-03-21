@@ -25,7 +25,7 @@ ORDER BY CAST(dewey_decimal AS DECIMAL) ASC
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Library Catalog Hub – Admin Portal</h2>
+  <h2>Archiva: Library Catalog Hub – Admin Portal</h2>
 
   <form method="GET" style="margin-top:10px; margin-bottom:15px;">
     <input type="text" name="search" placeholder="Search by title, author, or Dewey Decimal">
