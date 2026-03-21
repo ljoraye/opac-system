@@ -1,7 +1,14 @@
 <?php
 include("book_functions.php");
 
-$result = mysqli_query($conn, "SELECT * FROM books");
+$result = mysqli_query($conn, "
+  SELECT books.title, borrow_records.return_date
+  FROM books
+  JOIN borrow_records 
+    ON books.book_id = borrow_records.book_id
+  WHERE borrow_records.actual_return_date IS NULL
+");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +30,11 @@ $result = mysqli_query($conn, "SELECT * FROM books");
       <?php while($row = mysqli_fetch_assoc($result)) { ?>
         <tr>
           <td><?php echo $row['title']; ?></td>
-          <td><?php echo $row['due_date']; ?></td>
-          <td>₱<?php echo computeOverdue($row['due_date']); ?></td>
+          <td><?php echo $row['return_date']; ?></td>
+          <td>₱<?php echo computeOverdue($row['return_date']); ?></td>
         </tr>
       <?php } ?>
-    </table>
+      </table>
   </div>
 
   <a href="admin.php"><button>Back to Admin Page</button></a>
