@@ -7,7 +7,6 @@ if(isset($_POST['add'])){
 
   addBook($_POST['title'], $_POST['author'], $category, $_POST['year']);
   echo "Book added successfully!<br><br>";
-  echo '<a href="admin.php"><button>Back to Admin Page</button></a>';
 }
 ?>
 <!DOCTYPE html>

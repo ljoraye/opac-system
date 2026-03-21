@@ -13,7 +13,9 @@
 
   <!-- Main content container -->
   <div class="container">
-    <h2>Welcome to the Library Catalog</h2>
+    <!-- Logo at the top of the box -->
+    <img src="img/logo.png" alt="Welcome to the ARCHIVA" class="title-image">
+
     <p>Search, borrow, and manage books.</p>
     <div class="button-group">
       <a href="user.php"><button>User</button></a>
@@ -22,4 +24,3 @@
   </div>
 </body>
 </html>
-

@@ -25,7 +25,7 @@ ORDER BY CAST(dewey_decimal AS DECIMAL) ASC
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Library Catalog Hub – Admin Portal</h2>
+  <h2>Archiva: Library Catalog Hub – Admin Portal</h2>
 
   <form method="GET" style="margin-top:10px; margin-bottom:15px;">
     <input type="text" name="search" placeholder="Search by title, author, or Dewey Decimal">
@@ -94,7 +94,7 @@ ORDER BY CAST(dewey_decimal AS DECIMAL) ASC
   <div style="text-align:center; margin-top:10px;">
     <a href="add_book.php"><button>Add Book</button></a>
     <a href="overdue.php"><button>Overdue Fees</button></a>
-    <a href="user.php"><button>User Page</button></a>
+    <a href="index.php"><button>Return to Title Page</button></a>
   </div>
 </body>
 </html>

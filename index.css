@@ -43,12 +43,13 @@ body {
   position: relative;
   text-align: center;
   background: rgba(90,60,30,0.5); 
-  padding: 40px;
+  padding: 20px;              /* reduced padding */
+  width: 1000px;               /* smaller width */
   border: 8px solid #ffcc66;
   box-shadow: 
     0 0 0 4px #000,     
-    8px 8px 0 #000,
-    0 0 25px rgba(255,180,80,0.7); 
+    6px 6px 0 #000,
+    0 0 20px rgba(255,180,80,0.7); 
   animation: float 3s ease-in-out infinite;
   overflow: hidden;
   image-rendering: pixelated;
@@ -62,16 +63,20 @@ body {
 }
 
 /* =========================
-   Headings & Text
+   Logo Banner
 ========================= */
-h2 {
-  margin-bottom: 20px;
-  font-size: 18px;
-  color: #ffcc66;
+.title-image {
+  display: block;
+  margin: -20px auto -20px auto;   /* tighter spacing below logo */
+  max-width: 70%;             /* banner size */
+  height: auto;
 }
 
+/* =========================
+   Headings & Text
+========================= */
 p {
-  margin-bottom: 25px;
+  margin-bottom: 15px;        /* reduced spacing below text */
   font-size: 12px;
   color: #fff3e0;
 }
@@ -89,10 +94,9 @@ button {
   background: rgba(255,204,102,0.8);
   color: #402010;
   border: 4px solid #000;
-  padding: 12px 20px;
+  padding: 15px 20px;
   cursor: pointer;
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 10px;
   box-shadow: 4px 4px 0 #000;
   transition: transform 0.1s ease, background 0.3s ease;
   image-rendering: pixelated;

@@ -25,13 +25,15 @@ if (isset($_POST['password'])) {
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="popup-box">
-    <h2>Admin Access</h2>
-    <form method="POST">
-      Password: <input type="password" name="password" required><br><br>
-      <input type="submit" value="Login">
-    </form>
-    <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
+  <h2>Admin Access</h2>
+  <form method="POST">
+    Password: <input type="password" name="password" required><br><br>
+    <input type="submit" value="Login">
+  </form>
+  <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
+
+  <div style="margin-top:10px;">
+    <a href="index.php"><button type="button">Return to Title Page</button></a>
   </div>
 </body>
 </html>
