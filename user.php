@@ -21,11 +21,8 @@ ORDER BY CAST(dewey_decimal AS DECIMAL) ASC
 </head>
 <body>
   <h2>Online Public Access Catalog (User)</h2>
-  <div style="text-align:center; margin-bottom:20px;">
-    <a href="admin.php"><button>Admin Page</button></a>
-  </div>
 
-  <form method="GET">
+  <form method="GET" style="margin-top:10px;">
     <input type="text" name="search" placeholder="Search by title, author, or Dewey Decimal">
     <input type="submit" value="Search">
   </form>
