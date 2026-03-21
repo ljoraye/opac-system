@@ -24,5 +24,6 @@ if(isset($_POST['borrow'])){
     Return Date: <input type="date" name="return_date" required><br><br>
     <input type="submit" name="borrow" value="Confirm Borrow">
   </form>
+<a href="user.php"><button>Back to Main Page</button></a>
 </body>
 </html>

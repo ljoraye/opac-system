@@ -22,5 +22,6 @@ $result = mysqli_query($conn, "SELECT * FROM books");
       </tr>
     <?php } ?>
   </table>
+<a href="admin.php"><button>Back to Admin Page</button></a>
 </body>
 </html>

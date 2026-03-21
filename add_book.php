@@ -42,5 +42,6 @@ if(isset($_POST['add'])){
       <input type="submit" name="add" value="Add Book">
     </form>
   </div>
+<a href="admin.php"><button style="margin-top:10px;">Back to Admin Page</button></a>
 </body>
 </html>
