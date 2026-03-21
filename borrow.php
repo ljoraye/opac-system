@@ -6,7 +6,6 @@ $id = $_GET['id'];
 if(isset($_POST['borrow'])){
   borrowBook($id, $_POST['user_name'], $_POST['borrow_date'], $_POST['return_date']);
   echo "Book borrowed successfully!<br><br>";
-  echo '<a href="user.php"><button>Back to User Page</button></a>';
 }
 ?>
 <!DOCTYPE html>
@@ -14,7 +13,7 @@ if(isset($_POST['borrow'])){
 <head>
   <meta charset="UTF-8">
   <title>Borrow Book</title>
-  <link rel="stylesheet" href="pixel.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h2>Borrow Book</h2>
@@ -24,6 +23,7 @@ if(isset($_POST['borrow'])){
     Return Date: <input type="date" name="return_date" required><br><br>
     <input type="submit" name="borrow" value="Confirm Borrow">
   </form>
+
 <a href="user.php"><button>Back to Main Page</button></a>
 </body>
 </html>

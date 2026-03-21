@@ -8,20 +8,28 @@ $result = mysqli_query($conn, "SELECT * FROM books");
 <head>
   <meta charset="UTF-8">
   <title>Overdue Fees</title>
-  <link rel="stylesheet" href="pixel.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h2>Overdue Fees</h2>
-  <table>
-    <tr><th>Title</th><th>Due Date</th><th>Overdue Fee</th></tr>
-    <?php while($row = mysqli_fetch_assoc($result)) { ?>
+
+  <div class="table-container">
+    <table>
       <tr>
-        <td><?php echo $row['title']; ?></td>
-        <td><?php echo $row['due_date']; ?></td>
-        <td>₱<?php echo computeOverdue($row['due_date']); ?></td>
+        <th>Title</th>
+        <th>Due Date</th>
+        <th>Overdue Fee</th>
       </tr>
-    <?php } ?>
-  </table>
-<a href="admin.php"><button>Back to Admin Page</button></a>
+      <?php while($row = mysqli_fetch_assoc($result)) { ?>
+        <tr>
+          <td><?php echo $row['title']; ?></td>
+          <td><?php echo $row['due_date']; ?></td>
+          <td>₱<?php echo computeOverdue($row['due_date']); ?></td>
+        </tr>
+      <?php } ?>
+    </table>
+  </div>
+
+  <a href="admin.php"><button>Back to Admin Page</button></a>
 </body>
 </html>

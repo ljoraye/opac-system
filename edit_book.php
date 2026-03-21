@@ -29,7 +29,7 @@ if(isset($_POST['update'])){
 <head>
   <meta charset="UTF-8">
   <title>Edit Book</title>
-  <link rel="stylesheet" href="pixel.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h2>Edit Book</h2>
