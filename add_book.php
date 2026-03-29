@@ -14,7 +14,7 @@ if(isset($_POST['add'])){
 <head>
   <meta charset="UTF-8">
   <title>Add Book</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="archiva.css">
   <script>
     function toggleCustomCategory(select) {
       const customInput = document.getElementById('custom-category');

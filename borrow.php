@@ -13,7 +13,7 @@ if(isset($_POST['borrow'])){
 <head>
   <meta charset="UTF-8">
   <title>Borrow Book</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="archiva.css">
 </head>
 <body>
   <h2>Borrow Book</h2>

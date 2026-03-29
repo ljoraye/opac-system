@@ -22,7 +22,7 @@ if (isset($_POST['password'])) {
 <head>
   <meta charset="UTF-8">
   <title>Admin Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="archiva.css">
 </head>
 <body>
   <h2>Admin Access</h2>

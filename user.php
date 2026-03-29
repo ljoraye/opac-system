@@ -17,7 +17,7 @@ ORDER BY CAST(dewey_decimal AS DECIMAL) ASC
 <head>
   <meta charset="UTF-8">
   <title>User - OPAC</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="archiva.css">
 </head>
 <body>
   <h2>Archiva: Library Catalog Hub – User Portal</h2>
@@ -31,7 +31,7 @@ ORDER BY CAST(dewey_decimal AS DECIMAL) ASC
   <div class="table-container">
     <table>
       <tr>
-        <th>Dewey Decimal</th>
+        <th>Dewey</th>
         <th>Title</th>
         <th>Author</th>
         <th>Status</th>
