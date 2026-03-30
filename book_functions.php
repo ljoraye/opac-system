@@ -1,14 +1,24 @@
 <?php
 include("database.php");
+include("Book.php");
 
 // Add Book
 function addBook($title, $author, $category, $year){
     global $conn;
 
-    $dewey_decimal = getDeweyDecimal($category);
+    $book = new Book($title, $author, $category, $year);
+
+    $dewey_decimal = getDeweyDecimal($book->getCategory());
 
     $sql = "INSERT INTO books(title, author, category, year_published, status, dewey_decimal)
-            VALUES('$title','$author','$category','$year','Available','$dewey_decimal')";
+            VALUES(
+                '{$book->getTitle()}',
+                '{$book->getAuthor()}',
+                '{$book->getCategory()}',
+                '{$book->getYear()}',
+                'Available',
+                '$dewey_decimal'
+            )";
 
     mysqli_query($conn, $sql);
 }
@@ -54,7 +64,7 @@ function searchBooks($keyword){
             WHERE title LIKE '%$keyword%' 
             OR author LIKE '%$keyword%' 
             OR dewey_decimal LIKE '%$keyword%'";
-    return mysqli_query($conn,$sql);
+    return mysqli_query($conn, $sql);
 }
 
 // Borrowing Book
@@ -72,7 +82,7 @@ function borrowBook($book_id, $user_name, $borrow_date, $return_date){
     mysqli_query($conn, $sql2);
 }
 
-//Return Function
+// Return Book
 function returnBook($book_id){
     global $conn;
 
@@ -108,6 +118,6 @@ function getDeweyDecimal($category){
         "Biography"            => "920"
     ];
 
-    return isset($map[$category]) ? $map[$category] : "800"; // default = Literature
+    return isset($map[$category]) ? $map[$category] : "800";
 }
 ?>
