@@ -1,6 +1,3 @@
-<?php
-// Homepage of the OPAC System
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
