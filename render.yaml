@@ -1,0 +1,42 @@
+services:
+  # PHP Web Service
+  - type: web
+    name: opac-library
+    runtime: php
+    plan: free
+    buildCommand: "composer install --no-dev --optimize-autoloader"
+    startCommand: "apache2-foreground"
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: SESSION_LIFETIME
+        value: 7200
+      - key: ERROR_REPORTING
+        value: "E_ALL & ~E_DEPRECATED & ~E_STRICT"
+        sync: false
+      - key: DISPLAY_ERRORS
+        value: 0
+        sync: false
+    disk:
+      name: opac-storage
+      mountPath: /var/www/html/storage
+      sizeGB: 1
+
+  # MySQL Database
+  - type: pserv
+    name: opac-db
+    env: mysql
+    plan: free
+    envVars:
+      - key: MYSQL_DATABASE
+        value: opac_db
+      - key: MYSQL_USER
+        value: opac_user
+      - generateValue: true
+        key: MYSQL_PASSWORD
+      - generateValue: true
+        key: MYSQL_ROOT_PASSWORD
