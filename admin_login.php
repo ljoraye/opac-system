@@ -1,12 +1,13 @@
 <?php
 session_start();
+require_once 'load_env.php';
 
 // If form submitted
 if (isset($_POST['password'])) {
     $password = $_POST['password'];
 
-    // Set your chosen password here
-    $correct_password = "opac123";
+    // Get admin password from environment
+    $correct_password = $_ENV['ADMIN_PASSWORD'] ?? 'opac123';
 
     if ($password === $correct_password) {
         $_SESSION['admin_logged_in'] = true;
